@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -7,6 +7,12 @@ body {
 
 .video {
   position: relative;
+  height: 80vh;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .video > div {
   position: absolute;
@@ -17,6 +23,42 @@ body {
   left: 30vw;
   padding: 2rem;
   border-radius: 10px;
+}
+
+nav {
+  background: rgb(60, 3, 86);
+  color: white;
+
+  position: sticky;
+  top: 0;
+}
+
+.go-down {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  font-size: 2rem;
+  color: white;
+  font-weight: bolder;
+
+  transform: rotate(90deg);
+  animation: down 1s ease-out infinite;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.container ul {
+  display: flex;
+  list-style: none;
+}
+.container ul li {
+  margin-left: 1rem;
 }
 .para {
   background: rgb(20, 16, 16);
@@ -69,44 +111,35 @@ body {
   letter-spacing: 1rem;
 }
 
-
-.logo{
-  padding:  15px 5px ;
-  color: white;
-}
-
-.container{
-  display: flex;
-  width: 100%;
-  background: purple;
-}
-ul{
-  padding-left: 1000px;
-  list-style-type: none;
-}
-li  {
-  float: left;
-  color: white;
-  padding: 0 10px;
-  
-  
-}
-.sticky{
-  position: sticky;
-  top: 0;
+@keyframes down {
+  0% {
+    left: 50%;
+    bottom: 80px;
+    color: rgba(128, 128, 128, 0.009);
+  }
+  100% {
+    bottom: 20px;
+  }
 }
 
 .go-up {
-  padding: 0.8rem 1.2rem;
-  border-radius: 50%;
   background: orangered;
   font-size: 3rem;
-  font-weight: bolder;
+
   position: fixed;
   right: 20px;
   bottom: 20px;
+
   transform: rotate(270deg);
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-a.go-up{
+a.go-up {
   text-decoration: none;
 }
